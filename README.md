@@ -127,3 +127,35 @@ The model's confidence score represents its predicted probability and does not g
 The dashboard allows users to upload a fish image, select a trained model, view the predicted freshness category, and inspect the class probability chart.
 
 ![Fish Freshness Live Dashboard](dashboard_screenshot.png)
+## Model Evaluation Results
+
+The models were evaluated on a test dataset containing 240 images, with 80 images in each class: Fresh, Moderately Fresh, and Not Fresh.
+
+### Performance Comparison
+
+| Metric | Custom CNN | MobileNetV2 |
+|---|---:|---:|
+| Test Accuracy | 38.75% | 92.50% |
+| Macro F1-score | 0.2837 | 0.9243 |
+| Correct Predictions | 93/240 | 222/240 |
+
+### MobileNetV2 Classification Results
+
+| Class | Precision | Recall | F1-score | Support |
+|---|---:|---:|---:|---:|
+| Fresh (C1) | 0.9412 | 1.0000 | 0.9697 | 80 |
+| Moderately Fresh (C2) | 0.9231 | 0.9000 | 0.9114 | 80 |
+| Not Fresh (C3) | 0.9091 | 0.8750 | 0.8917 | 80 |
+
+### Evaluation Figures
+
+The `figures/` directory contains the model comparison chart, confusion matrices, accuracy and loss curves, ROC curves, and classification reports.
+
+- `figures/four_model_comparison.png` — model performance comparison
+- `figures/mobilenetv2_final_confusion_matrix.png` — MobileNetV2 confusion matrix
+- `figures/mobilenetv2_curves.png` — MobileNetV2 training curves
+- `figures/mobilenetv2_roc.png` — MobileNetV2 ROC curve
+
+### Discussion
+
+MobileNetV2 achieved 92.50% test accuracy and a macro F1-score of 0.9243, outperforming the custom CNN on this dataset. It correctly classified 222 of the 240 test images. Further testing on images collected under different conditions is needed before real-world use. Model predictions do not guarantee fish freshness or food safety.
