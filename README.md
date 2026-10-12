@@ -121,3 +121,9 @@ The Fish Freshness Assessment project now includes a live image prediction dashb
 ### Important Note
 
 The model's confidence score represents its predicted probability and does not guarantee the actual freshness or food safety of the fish.
+
+## Live Dashboard Preview
+
+The dashboard allows users to upload a fish image, select a trained model, view the predicted freshness category, and inspect the class probability chart.
+
+![Fish Freshness Live Dashboard](dashboard_screenshot.png)
