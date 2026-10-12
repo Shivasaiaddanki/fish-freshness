@@ -88,3 +88,36 @@ The project follows these steps:
 The CNN model may include:
 - convolution layers,
 - max pooling layers,
+## Latest Project Update — 12 October 2026
+
+The Fish Freshness Assessment project now includes a live image prediction dashboard using trained deep learning models.
+
+### New Dashboard Features
+
+- Upload a fish image directly from the dashboard.
+- Select between the Custom CNN and MobileNetV2 models.
+- Predict one of three freshness categories:
+  - **C1 — Fresh**
+  - **C2 — Moderately Fresh**
+  - **C3 — Not Fresh**
+- Display the predicted category and model confidence score.
+- Visualize class probabilities using a bar chart.
+
+### How to Run the Live Dashboard
+
+1. Install Python and the required project dependencies.
+2. Open Jupyter Notebook in the project environment.
+3. Open `fish_freshness_live_dashboard.ipynb`.
+4. Run the notebook cells in order.
+5. Select a fish image from your computer.
+6. Choose a model and click **Test Prediction**.
+7. Review the predicted category, confidence score, and probability chart.
+
+### Models Used
+
+- Custom Convolutional Neural Network (CNN)
+- MobileNetV2 transfer-learning model
+
+### Important Note
+
+The model's confidence score represents its predicted probability and does not guarantee the actual freshness or food safety of the fish.
